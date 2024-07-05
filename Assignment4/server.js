@@ -20,6 +20,9 @@ const app = express();
 
 const HTTP_PORT = process.env.PORT || 8080;
 
+app.set('views', __dirname + '/views');
+app.use(express.static(__dirname + '/public'));
+
 app.use(express.static('public'));
 app.set('view engine', 'ejs');
 
